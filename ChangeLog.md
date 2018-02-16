@@ -1,3 +1,3 @@
-# Changelog for scratch
+# Changelog for Calendar
 
 ## Unreleased changes
