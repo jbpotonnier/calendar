@@ -39,7 +39,10 @@ daysOfMonth year month = enumFromTo firstDay lastDay
   monthLength = fromIntegral (Cal.gregorianMonthLength year month) - 1
 
 drawUi :: Cal.Day -> [Widget n]
-drawUi today = [ui] where ui = renderYear 2018 today
+drawUi today = [ui]
+  where
+    ui = renderYear y today
+    (y, _m, _d) = Cal.toGregorian today
 
 renderYear :: Integer -> Cal.Day -> Widget n
 renderYear year today =
